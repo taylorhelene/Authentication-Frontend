@@ -52,19 +52,22 @@ const Login=({setToken})=>{
           </div>
 
           <div className="col-sm-6"> 
-            <form onSubmit={handleSubmit} > 
-                <label>
-                    <p>Username</p>
-                    <input type="text" onChange={(e)=>{setUserName(e.target.value)}}/>
-                </label>
-                <label>
-                    <p>Password</p>
-                    <input type="password" onChange={(e)=>{setPassword(e.target.value)}}/>
-                </label>
-                <div>
-                    <button  type="submit">Submit</button>
-                </div>
-            </form>
+            <div className="container">
+              <form onSubmit={handleSubmit} > 
+                  <label>
+                      <p>Username</p>
+                      <input type="text" onChange={(e)=>{setUserName(e.target.value)}}/>
+                  </label>
+                  <br></br>
+                  <label>
+                      <p>Password</p>
+                      <input type="password" onChange={(e)=>{setPassword(e.target.value)}}/>
+                  </label>
+                  <div>
+                      <button  type="submit">Submit</button>
+                  </div>
+              </form>
+            </div>
           </div>
         
         </div>

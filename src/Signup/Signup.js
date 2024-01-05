@@ -2,6 +2,7 @@ import React from "react";
 import './Signup.css';
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import signin from "../Images/signup.svg"
 
 async function loginUser(credentials) {
   
@@ -32,15 +33,25 @@ const Signup=()=>{
       }
 
     return(
-      <div>
-        <motion.div className="login-wrapper" animate={{scale:1.2}} transition={{ repeat:Infinity }}>
-            <h1>Please Sign up</h1>
-        </motion.div>
+      <div className="container">
+
+        <div className="row">
+          <div className="col-sm-6">
+            <motion.div className="login-wrapper" >
+                <img src={signin}/>
+                <h1>Please Sign up</h1>
+            </motion.div>
+          </div>
+       
+
+        <div className="col-sm-6"> 
+            <div className="container">
         <form onSubmit={handleSubmit}> 
             <label>
                 <p>Username</p>
                 <input type="text" onChange={(e)=>{setUserName(e.target.value)}}/>
             </label>
+            <br></br>
             <label>
                 <p>Password</p>
                 <input type="password" onChange={(e)=>{setPassword(e.target.value)}}/>
@@ -49,6 +60,10 @@ const Signup=()=>{
                 <button  type="submit" onClick={handleSubmit}>Sign Up</button>
             </div>
         </form>
+        </div>
+        </div>
+        </div>
+
       </div>
         
     )
