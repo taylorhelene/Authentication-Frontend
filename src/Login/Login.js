@@ -42,23 +42,32 @@ const Login=({setToken})=>{
 
     return(
       <div className="container">
-        <motion.div className="login-wrapper">
-            <img src={search} className="App-login"/>
-            <h1>Please Log In</h1>
-        </motion.div>
-        <form onSubmit={handleSubmit}> 
-            <label>
-                <p>Username</p>
-                <input type="text" onChange={(e)=>{setUserName(e.target.value)}}/>
-            </label>
-            <label>
-                <p>Password</p>
-                <input type="password" onChange={(e)=>{setPassword(e.target.value)}}/>
-            </label>
-            <div>
-                <button  type="submit">Submit</button>
-            </div>
-        </form>
+        
+        <div className="row"> 
+          <div className="col-sm-6">
+            <motion.div className="login-wrapper ">
+              <img src={search} className="App-login"/>
+              <h1>Please Log In</h1>
+            </motion.div>
+          </div>
+
+          <div className="col-sm-6"> 
+            <form onSubmit={handleSubmit} > 
+                <label>
+                    <p>Username</p>
+                    <input type="text" onChange={(e)=>{setUserName(e.target.value)}}/>
+                </label>
+                <label>
+                    <p>Password</p>
+                    <input type="password" onChange={(e)=>{setPassword(e.target.value)}}/>
+                </label>
+                <div>
+                    <button  type="submit">Submit</button>
+                </div>
+            </form>
+          </div>
+        
+        </div>
         <h2>Don't have an account? <a onClick={()=>navigate('/signup')}>Sign up </a></h2>
       </div>
         

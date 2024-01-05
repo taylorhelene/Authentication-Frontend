@@ -30,8 +30,8 @@ function App() {
   
   
   return (
-    <div className="wrapper">
-      <h1>Application</h1>
+    <div className="wrapper container">
+      <h1>Authentication application</h1>
       <BrowserRouter>
         <Routes>
           <Route path='/dashboard' element={<Dashboard/>} > </Route>
