@@ -2,6 +2,7 @@ import React from "react";
 import './Login.css';
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import search from '../Images/auth.svg'
 
 async function loginUser(credentials) {
   
@@ -40,8 +41,9 @@ const Login=({setToken})=>{
       }
 
     return(
-      <div>
-        <motion.div className="login-wrapper" animate={{scale:1.2}} transition={{ repeat:Infinity }}>
+      <div className="container">
+        <motion.div className="login-wrapper">
+            <img src={search} className="App-login"/>
             <h1>Please Log In</h1>
         </motion.div>
         <form onSubmit={handleSubmit}> 

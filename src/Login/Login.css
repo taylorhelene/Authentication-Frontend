@@ -3,3 +3,14 @@
     flex-direction: column;
     align-items: center;
 }
+
+.App-login {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-login {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
